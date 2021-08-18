@@ -72,7 +72,7 @@ for bag_file_name, taxi_id in zip(bag_file_names, taxi_ids):
         print "Error in unzipping bag!!"
         break
     #fix jsons using scale_data_fix.py
-    ret = os.system("python jpntaxi_scale_data_fix.py %s/%s.bag %s/%s/aip_xx1/ %s/%s_original/json/ %s/%s/" % (path, bag_file_name, yaml_config_path, config, path, bag_file_name, path, bag_file_name))
+    ret = os.system("python /home/nithilan/jpntaxi_annotation_data_fixer/jpntaxi_scale_data_fix.py %s/%s.bag %s/%s/aip_xx1/ %s/%s_original/json/ %s/%s/" % (path, bag_file_name, yaml_config_path, config, path, bag_file_name, path, bag_file_name))
     if ret == -1:
         print "Error in fixing %s bag!! Please check..." % (bag_file_name)
         break
